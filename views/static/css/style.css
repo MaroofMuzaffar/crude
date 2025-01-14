@@ -1,0 +1,10 @@
+.background{
+    background:linear-gradient(to right,gray,dimgray);
+}
+.mid-section{
+    height: 446px;
+    overflow: auto;
+}
+.mid-section::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,62 @@
+{{>header}}
+<title>Crud | Add</title>
+{{>navbar}}
+
+<div class="container-fluid mid-section my-3">
+    <h5 class="background text-light text-center p-2">Create Employee Record</h5>
+    <form action="/store" method="post">
+        <div class="mb-3">
+            <label>Name*</label>
+            <input type="text" name="name" placeholder="Full Name"
+                class="form-control border-3 {{#if error.name}} border-danger{{else}} border-secondary{{/if}}" value="{{data.name}}">
+            {{#if error.name}}<p class="text-danger">{{error.name}}</p>{{/if}}
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Email*</label>
+                <input type="email" name="email" placeholder="Email Address"
+                    class="form-control border-3 {{#if error.email}} border-danger{{else}} border-secondary{{/if}}" value="{{data.email}}">
+                {{#if error.email}}<p class="text-danger">{{error.email}}</p>{{/if}}
+            </div>
+             <div class="col-md-6 mb-3">
+                <label>Phone*</label>
+                <input type="text" name="phone" placeholder="Phone Number"
+                    class="form-control border-3 {{#if error.phone}} border-danger{{else}} border-secondary{{/if}}" value="{{data.phone}}">
+                {{#if error.phone}}<p class="text-danger">{{error.phone}}</p>{{/if}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Designation*</label>
+                <input type="text" name="designation" placeholder="Designation"
+                    class="form-control border-3 {{#if error.designation}} border-danger{{else}} border-secondary{{/if}}" value="{{data.designation}}">
+                {{#if error.designation}}<p class="text-danger">{{error.designation}}</p>{{/if}}
+            </div>
+             <div class="col-md-6 mb-3">
+                <label>Salary*</label>
+                <input type="number" name="salary" placeholder="Salary"
+                    class="form-control border-3 {{#if error.salary}} border-danger{{else}} border-secondary{{/if}}" value="{{data.salary}}">
+                {{#if error.salary}}<p class="text-danger">{{error.salary}}</p>{{/if}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>City</label>
+                <input type="text" name="city" placeholder="City Name" class="form-control border-3 border-secondary" value="{{data.city}}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>State</label>
+                <input type="text" name="state" placeholder="State Name" class="form-control border-3 border-secondary" value="{{data.state}}">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100 background">Create</button>
+        </div>
+    </form>
+</div>
+
+{{>footer}}
